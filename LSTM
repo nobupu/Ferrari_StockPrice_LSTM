@@ -20,7 +20,7 @@ df_ferrari_stock = pd.read_csv("./data/df_FerrariStockPrice3.csv")
 
 # 3. Confirm the data
 # Sort the values
-df_ferrari_stock['Date'] = pd.to_datetime(df_uniqlo_stock['Date'])
+df_ferrari_stock['Date'] = pd.to_datetime(df_ferrari_stock['Date'])
 df_ferrari_stock.sort_values(by='Date', inplace=True)
 # Put Date into the index
 df_ferrari_stock.set_index('Date', inplace=True)
