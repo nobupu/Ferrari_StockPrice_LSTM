@@ -16,15 +16,15 @@ plt.style.use('ggplot')
 
 
 # 2. Load CSV file which contains stock price
-df_uniqlo_stock = pd.read_csv("./data/df_FerrariStockPrice3.csv")
+df_ferrari_stock = pd.read_csv("./data/df_FerrariStockPrice3.csv")
 
 # 3. Confirm the data
 # Sort the values
-df_uniqlo_stock['Date'] = pd.to_datetime(df_uniqlo_stock['Date'])
-df_uniqlo_stock.sort_values(by='Date', inplace=True)
+df_ferrari_stock['Date'] = pd.to_datetime(df_uniqlo_stock['Date'])
+df_ferrari_stock.sort_values(by='Date', inplace=True)
 # Put Date into the index
-df_uniqlo_stock.set_index('Date', inplace=True)
-close_ts = df_uniqlo_stock['Close']
+df_ferrari_stock.set_index('Date', inplace=True)
+close_ts = df_ferrari_stock['Close']
 
 # 4. Create teh data set of time series a part of window_siz
 def split_window_data(np_array, window_size, normalization=False, window_normalization=False):
